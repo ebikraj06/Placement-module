@@ -1,0 +1,15 @@
+com\placementmodule\PlacementModuleApplication.class
+com\placementmodule\controller\PlacementViewController.class
+com\placementmodule\repository\LoginRepository.class
+com\placementmodule\exception\ErrorResponse.class
+com\placementmodule\repository\PlacementRepository.class
+com\placementmodule\service\impl\LoginServiceImpl.class
+com\placementmodule\service\impl\PlacementServiceImpl.class
+com\placementmodule\entities\Placement.class
+com\placementmodule\exception\RecordNotFoundException.class
+com\placementmodule\service\PlacementService.class
+com\placementmodule\entities\Login.class
+com\placementmodule\exception\InvalidInputException.class
+com\placementmodule\exception\ExceptionHelper.class
+com\placementmodule\controller\PlacementController.class
+com\placementmodule\controller\LoginController.class

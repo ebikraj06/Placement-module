@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Placement List</title>
+<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+		crossorigin="anonymous">
+</head>
+<body>
+	<div class="container" align="center">
+		 <h1>Placement Management System</h1>
+        <hr>
+        <div align="right">
+        <a th:href="@{/}" class="btn btn-primary btn-sm mb-3"> Placement Home </a></div>
+		<h3>Placement List</h3>
+				<table border="1" class="table table-striped  table-responsive-md ">
+			  <thead class="thead-dark">
+
+
+                <tr>
+                	<th>Placement ID</th>
+                    <th>Company Name</th>
+                    <th>Company Email</th>
+                    <th>Position</th>
+                    <th>HiringDate And Venue</th>
+                    <th>Percentage</th>
+                    <th> Actions </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="placement : ${placementList}">
+                <td th:text="${placement.id}"></td>
+                    <td th:text="${placement.companyName}"></td>
+                    <td th:text="${placement.companyEmail}"></td>
+                    <td th:text="${placement.position}"></td>
+                    <td th:text="${placement.dateAndVenue}"></td>
+                    <td th:text="${placement.percentage}"></td>
+                    <td><a th:href="@{/edit/placement/{id}(id=${placement.id})}" class="btn btn-primary">Edit</a>&nbsp;
+                       <a th:href="@{/delete/placement/{id}(id=${placement.id})}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this employee details ?');">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+		</table>
+	
+	</div>
+
+</body>
+</html>

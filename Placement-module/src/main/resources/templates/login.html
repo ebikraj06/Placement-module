@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Placement Login</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+</head>
+<body>
+
+
+
+	<style type="text/css">
+body, td, th {
+	color: #000000;
+}
+
+body {
+	background-color: #F0F0F0;
+}
+
+.style1 {
+	font-family: arial;
+	font-size: 14px;
+	padding: 12px;
+	line-height: 25px;
+	border-radius: 4px;
+	text-decoration: none;
+}
+
+.style2 {
+	font-family: arial;
+	font-size: 17px;
+	padding: 12px;
+	line-height: 25px;
+	border-radius: 4px;
+	text-decoration: none;
+}
+
+.login {
+	background-color: #79BAEC; /* Green */
+	border-color: #79BAEC;
+	color: white;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	margin: auto;
+	padding: 10px 38px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<table width="100%" height="100%" border="0" cellpadding="0"
+			align="center">
+			<tr>
+				<td align="center" valign="middle">
+					<table class="table-bordered" width="350" border="0"
+						cellpadding="3" cellspacing="3" bgcolor="#ffffff">
+
+						<form action="#" th:action="@{/login}" th:object="${login}"
+							method="post">
+
+
+							<tr>
+								<td height="25" colspan="2" align="left" valign="middle"
+									bgcolor="#ffffff" class="style2">
+									<div align="center">
+										<strong>Placement Login</strong>
+									</div>
+
+								</td>
+							</tr>
+
+							<tr>
+								<td>Username</td>
+								<td><input type="text" th:field="*{userName}"
+									class="form-control" /></td>
+							</tr>
+							<tr>
+								<td>Password</td>
+								<td><input type="password" th:field="*{password}"
+									class="form-control" /></td>
+							</tr>
+							<tr>
+
+								<td colspan="2">
+									<div align="center">
+										<button type="submit" class="login">Login</button>
+									</div>
+								</td>
+							</tr>
+
+						</form>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+</body>
+</html>

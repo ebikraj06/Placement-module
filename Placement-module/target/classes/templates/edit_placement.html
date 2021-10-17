@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Edit Placement</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container" align="center">
+		 <h1>Placement Management System</h1>
+        <hr>
+        <div align="right">
+        <a th:href="@{/}" class="btn btn-primary btn-sm mb-3"> Placement Home </a></div>
+		<h3>Edit Placement</h3>
+		<br />
+		<form action="#" th:action="@{/saveplacement}" th:object="${placement}"
+			method="post">
+
+			<table border="0" cellpadding="10">
+				<tr>
+					<td>Placement ID:</td>
+					<td><input type="text" th:field="*{id}" readonly="readonly" />
+					</td>
+				</tr>
+				<tr>
+					<td>Company Name:</td>
+					<td><input type="text" th:field="*{companyName}" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td>Company Email:</td>
+					<td><input type="text" th:field="*{companyEmail}" readonly="readonly"/></td>
+				</tr>
+				<tr>
+					<td>Position:</td>
+					<td><input type="text" th:field="*{position}" pattern="[A-Za-z]+" required="required"/></td>
+				</tr>
+				<tr>
+					<td>Date of Hiring</td>
+					<td><input type="text" th:field="*{dateAndVenue}" required="required"/></td>
+				</tr>
+				<tr>
+					<td>Percentage</td>
+					<td><input type="text" th:field="*{percentage}" readonly="readonly"/></td>
+				</tr>
+				
+				</table>
+				
+				<button class="btn btn-success" type="submit" algin="center">Save</button><br><br>
+				
+		</form>
+			</div>
+</body>
+</html>
